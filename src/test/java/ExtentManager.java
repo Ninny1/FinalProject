@@ -1,15 +1,13 @@
-
 import java.awt.AWTException;
 import java.io.File;
 import java.io.IOException;
-import java.nio.file.Files;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
 import java.util.Date;
-
+import com.google.common.io.Files;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import com.aventstack.extentreports.ExtentReports;
@@ -17,11 +15,11 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import org.openqa.selenium.WebDriver;
 
-public class HTMLManager {
+public class ExtentManager {
     public static WebDriver driver;
     //קונסטרקטור – שם הפונקציה כשם הקלאס
-    public HTMLManager(WebDriver driver) {
-        HTMLManager.driver = driver;
+    public ExtentManager(WebDriver driver) {
+        this.driver = driver;
     }
 
     public static ExtentReports extent;
@@ -30,7 +28,7 @@ public class HTMLManager {
     static DateFormat df = new SimpleDateFormat("yyyy-MM-dd-HH-mm-ss");
     static Date today = Calendar.getInstance().getTime();
     static String reportDate = df.format(today);
-    public static String filePath = "D:\\"+reportDate+"\\exReport.html";
+    public static String filePath = "D:\\" + reportDate+"\\TestReport-" + reportDate + ".html";
 
     public static ExtentReports GetExtent(){
         new File("d:\\"+ reportDate).mkdirs();
@@ -48,7 +46,7 @@ public class HTMLManager {
 
     private static ExtentSparkReporter getHtmlReporter() {
         htmlReporter = new ExtentSparkReporter(filePath);
-        htmlReporter.config().setDocumentTitle("QAV automation report");
+        htmlReporter.config().setDocumentTitle("QA automation report");
         htmlReporter.config().setReportName("Regression cycle");
         htmlReporter.config().setEncoding("windows-1255");
         return htmlReporter; }
@@ -62,12 +60,8 @@ public class HTMLManager {
         File oScnShot = oScn.getScreenshotAs(OutputType.FILE);
         File oDest = new File(imagePath);
         File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-        Files.copy(scrFile.toPath(), oDest.toPath());
+        Files.copy(scrFile, oDest);
         return imagePath;
     }
 
 }
-
-
-
-
