@@ -46,7 +46,7 @@ public class ExtentManager {
 
     private static ExtentSparkReporter getHtmlReporter() {
         htmlReporter = new ExtentSparkReporter(filePath);
-        htmlReporter.config().setDocumentTitle("QA automation report");
+        htmlReporter.config().setDocumentTitle("Amazon.com TestNG report");
         htmlReporter.config().setReportName("Regression cycle");
         htmlReporter.config().setEncoding("windows-1255");
         return htmlReporter; }

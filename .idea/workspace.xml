@@ -9,19 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fc04062f-5594-4a42-82aa-5e8190b68331" name="Changes" comment="HTML Manager Class">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/FinalProject_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ExtentManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/GmailService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/TestListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/searchFuncionalityRun.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/webElementsPOF.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/testng.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/HTMLManager.java" beforeDir="false" />
-    </list>
+    <list default="true" id="fc04062f-5594-4a42-82aa-5e8190b68331" name="Changes" comment="HTML Manager Class" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
